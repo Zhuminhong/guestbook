@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-25 19:00:08
+/* Smarty version 3.1.30, created on 2017-07-25 20:07:06
   from "C:\xampp\htdocs\Day07_0725\guestbook\application\views\home\home.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_597724b87c9129_23060349',
+  'unifunc' => 'content_5977346a2fdb87_66813261',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bfcd42448bf01becadaeebabd8037d0083ce6042' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Day07_0725\\guestbook\\application\\views\\home\\home.html',
-      1 => 1500980406,
+      1 => 1500984236,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_597724b87c9129_23060349 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5977346a2fdb87_66813261 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,7 +49,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 		<td><?php echo $_smarty_tpl->tpl_vars['value']->value->regTime;?>
 </td>
 		<td>
-			<a>修改</a>
+			<a href='update.php?id=<?php echo $_smarty_tpl->tpl_vars['value']->value->id;?>
+'>修改</a>
 			<a href='delete.php?id=<?php echo $_smarty_tpl->tpl_vars['value']->value->id;?>
 '>删除</a>
 		</td>
