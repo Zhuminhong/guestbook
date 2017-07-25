@@ -1,0 +1,11 @@
+<?php
+/**
+*作者：ZMH 
+*内容：数据库配置文件
+*时间:20170725
+*/
+define("HOST","localhost");
+define("DBNAME","web13");
+define("USERNAME","root");
+define("PWD","");
+?>
