@@ -33,17 +33,12 @@ $data=$result->fetchAll(PDO::FETCH_OBJ);
 //根据总页数，循环出每一页
 //pagination:bootstrap的分页类;
 $str="<ul class='pagination'>";
-//如果在第一页，就无法点击了
+//如果在第一页，就无法点击上一页了
 if($page==1){
-	$str.='<li class="disabled">
-				<a href="?page='.($page-1).'"><span>&laquo;</span></a>
-		   </li>';
+	$str.='<li class="disabled"><a href="?page='.($page-1).'"><span>&laquo;</span></a></li>';			 
 }else{
-	$str.='<li>
-				<a href="?page='.($page-1).'"><span>&laquo;</span></a>
-		   </li>';
+	$str.='<li><a href="?page='.($page-1).'"><span>&laquo;</span></a></li>';
 }
-
 
 for($i=1;$i<=$pageTotal;$i++){
 	if($page==$i){
@@ -52,14 +47,11 @@ for($i=1;$i<=$pageTotal;$i++){
 		$str.="<li><a href='?page=".$i."'>".$i."</a></li>";
 	}	
 }
+//如果在最后一页，就无法点击下一页了
 if($page==$pageTotal){
-	$str.='<li class="disabled">
-				<a href="?page='.($page+1).'"><span>&raquo;</span></a>
-		   </li>';
+	$str.='<li class="disabled"><a href="?page='.($page+1).'"><span>&raquo;</span></a></li>';
 }else{
-	$str.='<li>
-				<a href="?page='.($page+1).'"><span>&raquo;</span></a>
-	 	   </li>';
+	$str.='<li><a href="?page='.($page+1).'"><span>&raquo;</span></a></li>';
 }
 
 $str.="</ul>";
